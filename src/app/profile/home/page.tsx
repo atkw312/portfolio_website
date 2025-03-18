@@ -89,7 +89,7 @@ export default function Page() {
           <h1>Tony Wang - Software Developer</h1>
           <p>I am an aspiring developer currently studying in university. I enjoy learning new tools and building software with them. I am a full-stack developer with experience in both the frontend and backend. I also am interested in AI and ML tools as well as the cloud.</p>
           <div className='page-buttons'>
-            <a href='' className='flex flex-row gap-2 justify-center items-center text-black bg-white'><img className='page-button-img' src='../playbutton.png'/>Resume</a>
+            <a href='/Tony_Wang_Resume.pdf' target='_blank' className='flex flex-row gap-2 justify-center items-center text-black bg-white'><img className='page-button-img' src='../playbutton.png'/>Resume</a>
             <a href='https://www.linkedin.com/in/tkwang312' target='_blank' className='flex flex-row gap-2 justify-center items-center info-button'><img src='../information.png' className='page-button-img '/>LinkedIn</a>
           </div>
         </div>
