@@ -28,7 +28,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const { imageCat, setImageCat, profileType } = useImageType();
 
-  const handleSelectChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = e.target.value;
     setImageCat(selectedValue);
   }
