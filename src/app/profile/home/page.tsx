@@ -9,28 +9,28 @@ import { useProfileType } from '../imagetypecontext';
 
 let count = 0
 
-function plusDivs() {
-  count += 1;
-  showDivs();
-}
+// function plusDivs() {
+//   count += 1;
+//   showDivs();
+// }
 
-function minusDivs() {
-  count -= 1;
-  showDivs();
-}
+// function minusDivs() {
+//   count -= 1;
+//   showDivs();
+// }
 
-function handlePlus(e){
-  e.preventDefault();
-  console.log('clicked')
-  plusDivs()
-}
+// function handlePlus(e){
+//   e.preventDefault();
+//   console.log('clicked')
+//   plusDivs()
+// }
 
-function handleMinus(e){
-  e.preventDefault();
-  console.log('clicked')
-  console.log("count: " + count)
-  minusDivs()
-}
+// function handleMinus(e){
+//   e.preventDefault();
+//   console.log('clicked')
+//   console.log("count: " + count)
+//   minusDivs()
+// }
 
 // function augmentIndex(n: number, i: number){
 //   if (n + i >= slides.length) {
