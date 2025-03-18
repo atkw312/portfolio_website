@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+.linkedin-box {
+    background-color: #221F1F;
+    width: 400px;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 24px;
+    padding: 24px;
+    gap: 24px;
+    border-radius: 24px;
+    z-index: 2;
+}
+
+.name-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.role, .university {
+    font-size: 0.8em;
+    color: #aaa;
+    padding-bottom: 8px;
+    
+}
+
+.profile-description{
+    font-size: 0.8rem;
+    padding-bottom: 8px;
+}
+
+.linkedin-button {
+    font-size: 0.8rem;
+    background-color: #0084B1;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.linkedin-button img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    gap: 24px;
+}
+
+.linkedin-img {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    top: 50%;
+    margin-top: -35px;
+    position: relative;
+}
+
+.linkedin-img img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.linkedin-box-desc {
+    width: 75%
+}
+
+.contact-buttons {
+    background: #221F1F;
+    padding: 8px;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.animate-hover {
+    /* background-imag: transparent; */
+    border-radius: 8px;
+    padding: 2px;
+    z-index: 1;
+}
+
+.animate-hover:hover {
+    background-image: conic-gradient(red, blue, red);
+}
+
+/* .animate-hover:hover::before {
+    filter: blur(1.5rem);
+    opacity: 0.7;
+} */
+
+/* .linkedin-box:hover {
+    background-image: conic-gradient(red, blue, red);
+} */
+

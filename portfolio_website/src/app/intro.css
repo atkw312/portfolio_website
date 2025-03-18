@@ -1,0 +1,12 @@
+.intro {
+    width: 100%;
+    height: 100vh;
+    transition: transform 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-text {
+
+}

@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #121212;
 }
 
 @theme inline {
@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #101010;
     --foreground: #ededed;
   }
 }
@@ -23,4 +23,38 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.title-text {
+  color: #dd0b13;
+  font-family: "Lucida Console", Helvetica, sans-serif;
+}
+
+
+.neg-z {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.pos-z {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%
+}
+
+.navbar-adj {
+  margin-top: 64px;
 }

@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.skill_container {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    height: 100vh;
+}
+
+.skill_type {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-decoration: red underline;
+    text-underline-offset: 0.5rem;
+}
+
+.card_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.skill_card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.skill_card:hover {
+    transform: scale(1.1);
+    border: 1px red;
+}
+
+.skill_name {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.skill_desciption {
+    font-size: 0.8rem;
+    color: slategray;
+}

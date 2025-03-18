@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+.project_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,  minmax(350px, 1fr));
+    padding: 24px;
+    margin: 0px 24px;
+    grid-gap: 12px;
+}
+
+.project_card {
+    background-color: rgb(34, 29, 29);
+    height: 400px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 16px;
+}
+
+.project_card:hover {
+    transform: scale(1.05);
+}
+
+.name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.image_container {
+    display: inline-block;
+    /* border-radius: 16px; */
+    border-bottom: solid 2px red;
+}
+
+.image_container img {
+    border-radius: 16px 24px 0 0;
+}
+
+.skill_image {
+    height: 1em;
+    width: 1em;
+    object-fit: cover;
+}
+
+.skill_container_projects {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25em;
+    background-color: #121212;
+    border-radius: 4px;
+    padding: 4px;
+    align-items: center;
+}
+
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 10;
+  }
