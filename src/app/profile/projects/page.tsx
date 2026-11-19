@@ -26,10 +26,19 @@ export default function Page() {
                   </li>
                 ))}
               </ul>
-              {project.link && (
-                <a className='project_link' href={project.link} target='_blank' rel='noopener noreferrer'>
-                  View on GitHub →
-                </a>
+              {(project.demo || project.link) && (
+                <div className='project_links'>
+                  {project.demo && (
+                    <a className='project_link' href={project.demo} target='_blank' rel='noopener noreferrer'>
+                      Live site ↗
+                    </a>
+                  )}
+                  {project.link && (
+                    <a className='project_link' href={project.link} target='_blank' rel='noopener noreferrer'>
+                      View on GitHub →
+                    </a>
+                  )}
+                </div>
               )}
             </div>
           </article>

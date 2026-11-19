@@ -69,9 +69,15 @@
     align-items: center;
 }
 
+.project_links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+}
+
 .project_link {
     display: inline-block;
-    margin-top: 16px;
     font-size: 0.85rem;
     color: #e50914;
     font-weight: bold;

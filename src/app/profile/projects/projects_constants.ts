@@ -1,12 +1,102 @@
 export type Project = {
     name: string;
     link?: string;
+    demo?: string;
     imageUrl?: string;
     description: string;
     skills: { imageUrl: string; name: string }[];
 };
 
 export const projects_list: Project[] = [
+    {
+        name: "shft",
+        demo: "https://shftyourmind.xyz",
+        imageUrl: "/projects_images/shft.jpg",
+        description: "Focus app that blocks distracting apps and websites at the OS level and hides YouTube feeds, with synced schedules across Windows, macOS, iOS, Android and a Chrome extension.",
+        skills: [
+            {
+                imageUrl: "/skill_icons/rusticon.svg",
+                name: "Rust"
+            },
+            {
+                imageUrl: "/skill_icons/tauriicon.svg",
+                name: "Tauri"
+            },
+            {
+                imageUrl: "/skill_icons/reacticon.svg",
+                name: "React"
+            },
+            {
+                imageUrl: "/skill_icons/nextjsicon.svg",
+                name: "NextJS"
+            },
+            {
+                imageUrl: "/skill_icons/supabaseicon.svg",
+                name: "Supabase"
+            },
+            {
+                imageUrl: "/skill_icons/stripeicon.svg",
+                name: "Stripe"
+            },
+            {
+                imageUrl: "/skill_icons/swifticon.svg",
+                name: "Swift"
+            },
+            {
+                imageUrl: "/skill_icons/kotlinicon.svg",
+                name: "Kotlin"
+            },
+            {
+                imageUrl: "/skill_icons/chromeicon.svg",
+                name: "Chrome Extension"
+            },
+        ]
+    },
+    {
+        name: "AniGuesser",
+        link: "https://github.com/atkw312/multiplayer_quiz_app",
+        demo: "https://multiplayer-quiz-app-phi.vercel.app",
+        imageUrl: "/projects_images/aniguesser.jpg",
+        description: "Real-time multiplayer anime quiz game. Players race to guess characters in shared lobbies, with Redis-ordered placements and event-driven stats on Spring Boot microservices.",
+        skills: [
+            {
+                imageUrl: "/skill_icons/nextjsicon.svg",
+                name: "NextJS"
+            },
+            {
+                imageUrl: "/skill_icons/tsicon.svg",
+                name: "TypeScript"
+            },
+            {
+                imageUrl: "/skill_icons/springicon.svg",
+                name: "Spring Boot"
+            },
+            {
+                imageUrl: "/skill_icons/postgresqlicon.svg",
+                name: "PostgreSQL"
+            },
+            {
+                imageUrl: "/skill_icons/redisicon.svg",
+                name: "Redis"
+            },
+            {
+                imageUrl: "/skill_icons/apachekafkaicon.svg",
+                name: "Kafka"
+            },
+            {
+                imageUrl: "/skill_icons/kubernetesicon.svg",
+                name: "Kubernetes"
+            },
+            {
+                imageUrl: "/skill_icons/terraformicon.svg",
+                name: "Terraform"
+            },
+            {
+                imageUrl: "/skill_icons/awsicon.svg",
+                name: "AWS"
+            },
+        ]
+    },
     {
         name: "MangaFoo",
         link: "https://github.com/atkw312/MangaFoo-Web",
