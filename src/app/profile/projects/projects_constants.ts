@@ -1,6 +1,15 @@
-export const projects_list = [
+export type Project = {
+    name: string;
+    link?: string;
+    imageUrl?: string;
+    description: string;
+    skills: { imageUrl: string; name: string }[];
+};
+
+export const projects_list: Project[] = [
     {
         name: "MangaFoo",
+        link: "https://github.com/atkw312/MangaFoo-Web",
         imageUrl: "/projects_images/mangafoo.png",
         description: "AI manga/comic creation app using Stable Diffusion.",
         skills: [
@@ -63,7 +72,6 @@ export const projects_list = [
     },
     {
         name: "PetPal",
-        imageUrl: "/projects_images/petpal.png",
         description: "Dating app-style platform for matching pet shelters with potential adopters.",
         skills: [
             {
@@ -82,6 +90,7 @@ export const projects_list = [
     },
     {
         name: "Leetcode Flashcards",
+        link: "https://github.com/atkw312/Anki-Leetcode",
         imageUrl: "/projects_images/leetcode_flashcards.png",
         description: "Flashcard app for Leetcode studying.",
         skills: [
@@ -101,7 +110,7 @@ export const projects_list = [
     },
     {
         name: "Mental Health Chatbot",
-        imageUrl: "/projects_images/mental_health_chatbot.png",
+        link: "https://github.com/atkw312/mental-health-AI-chatbot",
         description: "Mental health chatbot based on the paper 'Attention is All You Need'.",
         skills: [
             {
@@ -116,7 +125,7 @@ export const projects_list = [
     },
     {
         name: "WakeUpAlarm",
-        imageUrl: "project_images/wakeup_alarm.png",
+        link: "https://github.com/atkw312/GetUpAlarm",
         description: "iOS alarm and clock app.",
         skills: [
             {
@@ -131,6 +140,7 @@ export const projects_list = [
     },
     {
         name: "Portfolio 2",
+        link: "https://github.com/atkw312/portfolio_website",
         imageUrl: "/projects_images/portfolio_2.png",
         description: "Netflix-inspired portfolio website.",
         skills: [
@@ -158,6 +168,7 @@ export const projects_list = [
     },
     {
         name: "Portfolio 1",
+        link: "https://github.com/atkw312/portfolio",
         imageUrl: "/projects_images/portfolio_1.png",
         description: "3D scene for portfolio website.",
         skills: [
@@ -177,7 +188,7 @@ export const projects_list = [
     },
     {
         name: "North Shore Mountains",
-        imageUrl: "/projects_images/north_shore_mountains.png",
+        link: "https://github.com/atkw312/North-Shore-Ski-Mountain-Website",
         description: "Interactive 3D blog website about the North Shore Ski Mountains in BC.",
         skills: [
             {

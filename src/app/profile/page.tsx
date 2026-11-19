@@ -1,33 +1,27 @@
 'use client'
 
-import {profiles} from './profile_constants'
+import Image from 'next/image'
 import Link from 'next/link'
-import './profile_constants'
-import './profile.css'
+import { profiles } from './profile_constants'
 import { useProfileType } from './imagetypecontext'
-
+import './profile.css'
 
 export default function Page() {
-    const {setProfileType} = useProfileType();
+  const { setProfileType } = useProfileType();
 
-    function handleProfileSelect(p: string) {
-        setProfileType(p);
-    }
-
-    return(
-        <div className='whos-watching'>
-            <h1>Who's Watching?</h1>
-            <div className='profiles-row'>
-                {profiles.map((profile, profileIndex) => (
-                    <div key={profileIndex} className='profile-container'>
-                        <Link href={profile.nav} onClick={() => handleProfileSelect(profile.name)}>
-                            <img className='profile-img' src={profile.imgUrl}/>
-                        </Link>
-                        <h3>{profile.name}</h3>
-                    </div>
-                ))}
-            </div>
-        </div>
-    )
-
+  return (
+    <div className='whos-watching'>
+      <h1>Who&apos;s Watching?</h1>
+      <div className='profiles-row'>
+        {profiles.map((profile) => (
+          <div key={profile.name} className='profile-container'>
+            <Link href={profile.nav} onClick={() => setProfileType(profile.name)}>
+              <Image className='profile-img' src={profile.imgUrl} alt={`${profile.name} profile`} width={150} height={150} />
+            </Link>
+            <h3>{profile.name}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
 }

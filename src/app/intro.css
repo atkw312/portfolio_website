@@ -1,12 +1,13 @@
 .intro {
-    width: 100%;
-    height: 100vh;
-    transition: transform 0.3s ease-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.intro-text {
-
+.intro img {
+  max-width: 80vw;
+  height: auto;
 }

@@ -19,11 +19,6 @@ export const slides = [
           nav: "/profile/education"
       },
       {
-          name: "Certifications",
-          imgUrl: "/western/experience.jpg",
-          nav: "/profile/experience"
-      },
-      {
           name: "Contact Me",
           imgUrl: "/western/contact.jpg",
           nav: "/profile/contact"
@@ -65,11 +60,6 @@ export const slides = [
           name: "Education",
           imgUrl: "/kdrama/education.webp",
           nav: "/profile/education"
-      },
-      {
-          name: "Certifications",
-          imgUrl: "/kdrama/experience.jpg",
-          nav: "/profile/experience"
       },
       {
           name: "Contact",
@@ -115,11 +105,6 @@ export const slides = [
           nav: "/profile/education"
       },
       {
-          name: "Certifications",
-          imgUrl: "/cdrama/certifications.png",
-          nav: "/profile/experience"
-      },
-      {
           name: "Contact Me",
           imgUrl: "/cdrama/contact2.png",
           nav: "/profile/contact"
@@ -161,11 +146,6 @@ export const slides = [
           name: "Education",
           imgUrl: "/anime/education.jpg",
           nav: "/profile/education"
-      },
-      {
-          name: "Certifications",
-          imgUrl: "/anime/experience.jpg",
-          nav: "/profile/experience"
       },
       {
           name: "Contact Me",

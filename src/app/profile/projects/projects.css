@@ -1,25 +1,27 @@
-@import "tailwindcss";
-
 .project_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill,  minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
     padding: 24px;
-    margin: 0px 24px;
-    grid-gap: 12px;
+    margin: 0 24px;
+    gap: 16px;
+    justify-items: center;
 }
 
 .project_card {
     background-color: rgb(34, 29, 29);
-    height: 400px;
-    width: 350px;
+    min-height: 400px;
+    width: 100%;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
 }
 
 .project_card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .name {
@@ -28,19 +30,33 @@
 }
 
 .image_container {
-    display: inline-block;
-    /* border-radius: 16px; */
+    position: relative;
+    aspect-ratio: 16 / 9;
     border-bottom: solid 2px red;
+    background: linear-gradient(135deg, #3a0a0c, #141414);
 }
 
 .image_container img {
-    border-radius: 16px 24px 0 0;
+    object-fit: cover;
+}
+
+.image_placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .skill_image {
     height: 1em;
     width: 1em;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .skill_container_projects {
@@ -53,16 +69,21 @@
     align-items: center;
 }
 
+.project_link {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: #e50914;
+    font-weight: bold;
+}
 
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 20px;
-    z-index: 10;
-  }
+.project_link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .project_grid {
+        margin: 0;
+        padding: 16px;
+    }
+}

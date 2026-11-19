@@ -1,84 +1,64 @@
 "use client";
 
+import Image from 'next/image'
 import Link from 'next/link'
-import './profile.css'
-import {useEffect} from 'react'
-import { useRouter, usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import { useImageType } from './imagetypecontext'
+import './profile.css'
 
+const links = [
+  { href: '/profile/projects', label: 'Projects' },
+  { href: '/profile/skills', label: 'Skills' },
+  { href: '/profile/education', label: 'Education' },
+  { href: '/profile/contact', label: 'Hire Me' },
+];
 
 const Navbar = () => {
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const navbarScroll = document.querySelector(".navbar");
-      if (!navbarScroll) return;
-      
-      if (window.scrollY > 50) {
-        navbarScroll.classList.add("navbar-scrolled");
-      } else {
-        navbarScroll.classList.remove("navbar-scrolled");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []); 
-
-  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
   const { imageCat, setImageCat, profileType } = useImageType();
 
-  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedValue = e.target.value;
-    setImageCat(selectedValue);
-  }
   useEffect(() => {
-    console.log("Updated imageCat in Navbar:", imageCat);
-  }, [imageCat]); 
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="navbar pos-z">
-      <ul className="flex flex-row p-5 justify-between">
-        <div className='flex flex-row gap-5'>
-          <li className="title-text">
-            <Link href='./home'><img src='/name.png' className='navbar-title-img'/></Link>
+    <nav className={`navbar pos-z ${scrolled ? 'navbar-scrolled' : ''}`}>
+      <ul className="navbar-list">
+        <li>
+          <Link href='/profile/home'>
+            <Image src='/name.png' alt='Tony Wang, home' width={354} height={79} className='navbar-title-img' priority />
+          </Link>
+        </li>
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link href={link.href}>{link.label}</Link>
           </li>
-          <li className="">
-            <Link href="./projects">Projects</Link>
-          </li>
-          <li className="">
-            <Link href="./skills">Skills</Link>
-          </li>
-          <li className="">
-            <Link href="./education">Education</Link>
-          </li>
-          <li className="">
-            <Link href="./contact">Hire Me</Link>
-          </li>
-          <li>
-            <div className='navbar-dropdown'>
-              <select className='flex flex-col navbar-dropdown-content' defaultValue={"placeholder"} onChange={handleSelectChange}>
-                <option value="placeholder" disabled hidden>Genre</option>
-                <option value="home">Hollywood</option>
-                <option value="kdrama">K-Dramas</option>
-                <option value="cdrama">C-Dramas</option>
-                <option value="anime">Anime</option>
-
-                {/* <Link href="./cdrama">Cdrama</Link>
-                <Link href="./anime">Anime</Link> */}
-              </select>
-            </div>
-          </li>
-        </div>
-        <div className='flex flex-row gap-5 mr-10'>
-          <li>
-            <Link href="../profile">
-              <div className='navbar-img-container'><img src={`../netflix-icons/${profileType}.jpg`}/></div>
+        ))}
+        <li>
+          <select
+            className='navbar-dropdown-content'
+            aria-label='Genre'
+            value={imageCat}
+            onChange={(e) => setImageCat(e.target.value)}
+          >
+            <option value="home">Hollywood</option>
+            <option value="kdrama">K-Dramas</option>
+            <option value="cdrama">C-Dramas</option>
+            <option value="anime">Anime</option>
+          </select>
+        </li>
+        {profileType && (
+          <li className='navbar-avatar'>
+            <Link href="/profile" aria-label="Switch profile">
+              <Image src={`/netflix-icons/${profileType}.jpg`} alt={`${profileType} profile`} width={32} height={32} className='navbar-avatar-img' />
             </Link>
           </li>
-        </div>
+        )}
       </ul>
-    </div>
+    </nav>
   )
 }
 
