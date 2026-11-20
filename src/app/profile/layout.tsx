@@ -1,12 +1,10 @@
 "use client"
 
-import "../globals.css";
 import Navbar from "./navbar";
 import { usePathname } from "next/navigation";
 import { ImageTypeProvider } from './imagetypecontext'
 
-
-export default function RootLayout({
+export default function ProfileLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -17,7 +15,7 @@ export default function RootLayout({
     <ImageTypeProvider>
       <div className="h-screen flex flex-col">
         {pathname !== "/profile" && <Navbar />}
-        <div className="neg-z">{children}</div>
+        <main className="neg-z">{children}</main>
       </div>
     </ImageTypeProvider>
   );
